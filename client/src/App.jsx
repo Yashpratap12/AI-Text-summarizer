@@ -1,6 +1,6 @@
 // src/App.jsx
 import { useState } from 'react';
-import './index.css'; // Now we'll use a simple index.css file
+import './index.css';
 
 function App() {
   const [inputText, setInputText] = useState('');
@@ -9,7 +9,6 @@ function App() {
   const [error, setError] = useState(null);
 
   const handleSummarize = async () => {
-    // Basic validation
     if (!inputText.trim()) {
       setError('Please enter some text to summarize.');
       return;
@@ -20,8 +19,8 @@ function App() {
     setSummaryText('');
 
     try {
-      // Connect to the backend
-      const response = await fetch('http://localhost:3001/summarize', {
+      // The API call is now a relative path, so it works on Vercel
+      const response = await fetch('/api/summarize', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
