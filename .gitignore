@@ -1,0 +1,22 @@
+# Dependency folders
+node_modules/
+/client/node_modules/
+/server/node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Vercel and build files
+.vercel/
+/client/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and IDE files
+.DS_Store
+.vscode/
+.idea/
