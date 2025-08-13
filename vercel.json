@@ -12,7 +12,7 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/summarize",
       "dest": "/server/server.js"
     },
     {
@@ -21,3 +21,4 @@
     }
   ]
 }
+
